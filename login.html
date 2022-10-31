@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Cochin Cabs</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"  crossorigin="anonymous">
+    <link rel="stylesheet" href="../uloax\css\login.css">
+</head>
+
+<body background="../uloax\images\img-6.png" width="100%"></body>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light bg-light">
+              <div class="container">
+                <a class="navbar-brand" href="login.html">COCHIN CABS</a>
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="login.html" aria-current="page">Home <span class="visually-hidden">(current)</span></a>
+                        </li>
+                        
+                    </ul>
+                    <form class="d-flex my-2 my-lg-0">
+                        <input class="form-control me-sm-2" type="text" placeholder="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+          </div>
+        </nav>
+    </header>
+    <h1>Welcome To COCHIN CABS </h1>
+    
+            <div class="col-md-7">
+               <marquee> <h1 class="booking_text">Book your Cab in Cochin NOW</h1></marquee>
+                <div class="contact_bg">
+                <div class="input_main">
+                  <div class="container">
+                    <h2 class="request_text">Your everyday travel partner</h2>
+                    <form method="post" id="loginform" name="loginform" onsubmit="validate(event);" action="../uloax\index.html">
+                    <div class="form-group">
+                      <input type="email" class="email-bt" id="emails-bt" placeholder="Your email" name="email" minlength="8" maxlength="30" required>
+                    </div>
+                    <div class="form-group">
+                      <input type="password" class="email-bt" id="pass-bt" placeholder="Password" name="password" minlength="8" maxlength="20"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, min 8 max - 12 characters"required>
+                    </div>
+                      
+                      </div> 
+                      </div>
+                    <div class="send_bt">
+                        <button type="submit" class="login1" id="login1">Login</button>
+                      
+                    </div>
+                    </form>
+              </div>
+              </div>
+            </div>
+        </div>        
+    
+        </div>
+    </div>
+    </div>
+    </form>
+    <footer class="text-light align-bottom">
+        <div class="container1">
+            <div class="row">
+        
+                <div class="col-sm-12">
+                    <h4>Reach Us</h4>
+                    <p>CochinCabs@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        var btnLogin = document.getElementById('login1');
+        function validate(e){
+            
+
+            var email = document.forms["loginform"]["emails-bt"].value;
+            var password = document.forms["loginform"]["pass-bt"].value;
+
+            if(email.length == 0 || password.length == 0){
+                e.preventDefault();
+            }
+        }
+
+        var elements = document.querySelectorAll('#loginform input');
+        elements.forEach(e=>{
+            e.addEventListener('keyup', function(){
+                console.log(document.getElementById('pass-bt').validity.valid);
+                var email = document.forms["loginform"]["emails-bt"];
+                var password = document.forms["loginform"]["pass-bt"];
+
+                if(email.value == "" || password.value == ""){
+                    login1.setAttribute('disabled', true);
+                }
+                else
+                {
+                    login1.removeAttribute('disabled');
+                }
+            })
+        })
+    </script>
+    <style>
+        input:invalid{
+            border-color:brown;
+        }
+    </style>
+</body>
+
+</html>
